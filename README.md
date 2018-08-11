@@ -5,7 +5,7 @@ A variety of singleton partterns
 a bad solution: 只适用与单线程环境的写法。
 <br><br>
 #### Singleton2.java<br>
-a bad solution: 虽然在多线程环境中能工作，但效率不高。
+a bad solution: 虽然在多线程环境中能工作，但效率不高。<br>
 问题：类中为什么要单独创建obj作为锁对象，不用Singleton2 做锁对象？ <br>
 解析：个人觉得这个类加载机制有关。每一个类加载器都拥有一个独立的类名称空间，因此如果不同的类加载器加载该类，会产生另一类。而静态变量存储在方法区，可能会保证有同一个obj类对象。
 <br><br>
